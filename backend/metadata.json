@@ -1,0 +1,5 @@
+{
+  "name": "Academic Analytics & Monitoring System Backend",
+  "description": "A Node.js and Express backend for a role-based academic analytics system using Supabase for the database and authentication.",
+  "requestFramePermissions": []
+}
