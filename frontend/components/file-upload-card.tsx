@@ -91,16 +91,16 @@ export function FileUploadCard({
       </div>
 
       {status === "success" && (
-        <div className="flex items-gap-2 p-3 bg-green-50 dark:bg-green-950 rounded-lg mb-4">
-          <CheckCircle className="w-5 h-5 text-green-600 flex-shrink-0" />
-          <p className="text-sm text-green-600">{message}</p>
+        <div className="flex items-start gap-2 p-3 bg-green-50 dark:bg-green-950 rounded-lg mb-4">
+          <CheckCircle className="w-5 h-5 text-green-600 flex-shrink-0 mt-0.5" />
+          <p className="text-sm text-green-600 whitespace-pre-line">{message}</p>
         </div>
       )}
 
       {status === "error" && (
-        <div className="flex items-gap-2 p-3 bg-red-50 dark:bg-red-950 rounded-lg mb-4">
-          <AlertCircle className="w-5 h-5 text-red-600 flex-shrink-0" />
-          <p className="text-sm text-red-600">{message}</p>
+        <div className="flex items-start gap-2 p-3 bg-red-50 dark:bg-red-950 rounded-lg mb-4">
+          <AlertCircle className="w-5 h-5 text-red-600 flex-shrink-0 mt-0.5" />
+          <p className="text-sm text-red-600 whitespace-pre-line">{message}</p>
         </div>
       )}
 

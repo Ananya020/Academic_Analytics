@@ -5,6 +5,7 @@ import { Navbar } from "@/components/navbar"
 import { Sidebar } from "@/components/sidebar"
 import { ProtectedRoute } from "@/components/protected-route"
 import { FileUploadCard } from "@/components/file-upload-card"
+import { ExcelUploadCard } from "@/components/excel-upload-card"
 import { auth } from "@/lib/auth"
 import { Upload, BarChart3 } from "lucide-react"
 
@@ -32,8 +33,26 @@ export default function FAUploadsPage() {
           <div className="flex-1 overflow-auto">
             <div className="p-8">
               <div className="mb-8">
-                <h2 className="text-3xl font-bold text-foreground mb-2">CSV Uploads</h2>
-                <p className="text-muted-foreground">Upload academic data files</p>
+                <h2 className="text-3xl font-bold text-foreground mb-2">Data Uploads</h2>
+                <p className="text-muted-foreground">Upload Excel file or individual CSV files with academic data</p>
+              </div>
+
+              <div className="mb-8">
+                <ExcelUploadCard />
+              </div>
+
+              <div className="mb-6">
+                <FileUploadCard
+                  title="Upload Course Code CSV"
+                  description="Upload CSV with Register No, Student Name, Course Code, and Grade (e.g., dataforinhouseCSV.csv)"
+                  endpoint="/fa/upload/course-code-csv"
+                  acceptedTypes=".csv"
+                />
+              </div>
+
+              <div className="mb-4">
+                <h3 className="text-xl font-semibold mb-2">Or Upload Individual CSV Files</h3>
+                <p className="text-sm text-muted-foreground mb-4">Upload separate CSV files for each data type</p>
               </div>
 
               <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">

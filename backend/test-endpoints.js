@@ -119,8 +119,8 @@ async function main() {
   await testHealthCheck();
   
   // Test login (you'll need to provide valid credentials)
-  const email = process.argv[2] || 'fa@example.com';
-  const password = process.argv[3] || 'password';
+  const email = process.argv[2] || 'aa6196@srmist.edu.in';
+  const password = process.argv[3] || 'aa6196';
   
   log(`\n📝 Using credentials: ${email}`, 'yellow');
   log('   (Provide credentials as: node test-endpoints.js <email> <password>)', 'yellow');
